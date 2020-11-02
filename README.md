@@ -3,6 +3,10 @@
 ## Abstract
 Retinal Optical Coherence Tomography (OCT) involves the imaging of the retina using low-coherence light. The analysis of these images for eye defects is commonly referred to as Retinal Image Analysis (RIA). There are numerous demands for retinal analysis to be more accurate, reliable, and measurable. This project applies Convolutional Neural Network (CNN) to predict the presence of Choroidal Neovascularisation (CNV), Diabetic Macular Edema (DME) and Drusen in OCT images. The model was applied to an image dataset consisting of over 84000 pre-labelled images. The OCT images were pre-processed by resampling using a random under sampler to handle the imbalance in classes. Image generation was used to feed batches of randomly generated images, based on the original images from the dataset, to the CNN classification algorithm. The model produced relatively high sensitivity (recall) scores for each class in the model; all above 0.9. The F1 score was used as a more generalised performance metric as it balances the trade-off between precision and recall scores. The F1 score for the classes ranged between 0.93 and 1.00.
 
+### Where was the data sourced from? What was the size of data?
+https://data.mendeley.com/datasets/rscbjbr9sj/3
+The size of dataset was approximately 6gb.
+
 ## Conclusion and Future work
 This paper discussed the application of CNN on the detection of CNV, DME, Drusen, and normal i.e. no defect in OCT images.
 Majority of past work in this area focused on only the detection of one or the other eye defect. This project is one of few that focused on the detection of multiple eye defects. The model achieved an overall accuracy of 98% with an F1 score of 0.98, 0.96, 1.00, and 0.97 for CNV, DME, Drusen, and normal, respectively. A major advantage of the choice of CNN algorithm is that it takes the entire image as input, and automatically detects features that distinguish each class in the entire dataset as opposed to manually extracting the features in each class before training.
